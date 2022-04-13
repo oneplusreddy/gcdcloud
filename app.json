@@ -1,0 +1,24 @@
+{
+  "name": "gcdcloud",
+  "description": "gcdcloud is a project that let you host your google drive with http server",
+  "env": {
+    "PCLOUD_UID": {
+      "description": "username of your pcloud account"
+    },
+    "PCLOUD_PASSWORD": {
+      "description": "password of your pcloud account"
+    },
+    "PCLOUD_FOLDERID": {
+      "description": "the folder id that the config file will be stored into"
+    },
+    "GD_CLIENT_ID": {
+      "description": "the client id of your google drive api"
+    },
+    "GD_CLIENT_SECRET": {
+      "description": "the client secret of your google drive api"
+    },
+    "GD_SCOPE": {
+      "description": "the google drive scope that the OAuth will use"
+    }
+  }
+}
