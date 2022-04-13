@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="favicon.ico">
+        <title>gcd-cloud authentication</title>
+    </head>
+    <h3>submit your profile</h3>
+    <form enctype="multipart/form-data" action="/auth" method="post">
+        <p>uid(will be used as url path)</p>
+        <input type="text" required="required" name="uid"><br>
+        <p>pathid(folder id to be hosted)</p>
+        <input type="text" required="required" name="pathid"><br>
+        <p>secretkey(to protect your profile, or reset the pathid)</p>
+        <input type="password" required="required" name="secretkey"><br>
+        <p>protection</p>
+        <input type="checkbox" name="protect" value="access_protect">auth required for download file<br>
+        <input type="checkbox" name="protect" value="list_protect">auth required for folder listing<br>
+        <button type="submit">Submit</button><br>
+    </form>
+</html>
