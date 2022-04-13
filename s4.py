@@ -27,7 +27,7 @@ import base64
 def update_uprofile():
     with open('global_uprofile_dict.json','w',encoding='utf-8') as f:
         f.write(json.dumps(global_uprofile_dict))
-    pcloud_api.uploadfile(**pcloud_config,name='global_uprofile_dict.json',folderid=os.environ.get('folderid','None'),file_path='global_uprofile_dict.json')
+    pcloud_api.uploadfile(**pcloud_config,name='global_uprofile_dict.json',folderid=os.environ.get('PCLOUD_FOLDERID','None'),file_path='global_uprofile_dict.json')
 
 def send_200_basic(target_class,s):
     target_class.send_response(200, 'ok')
@@ -314,7 +314,7 @@ if __name__=='__main__':
     scope=str(os.environ.get('GD_SCOPE','None'))
     global_uprofile_dict=dict()
     global_dn_dict=dict()
-    pcloud_api.download(**pcloud_config,name='global_uprofile_dict.json',folderid=os.environ.get('folderid','None'),file_path='global_uprofile_dict.json')
+    pcloud_api.download(**pcloud_config,name='global_uprofile_dict.json',folderid=os.environ.get('PCLOUD_FOLDERID','None'),file_path='global_uprofile_dict.json')
     with open('global_uprofile_dict.json','r',encoding='utf-8') as f:
         global_uprofile_dict=json.loads(f.read())
     flow_dict=dict()
